@@ -8,6 +8,11 @@ public class AuthenticationService {
 	public void authenticate(String username, String password) throws Exception {
 	}
 
+	@Override
+	public String toString() {
+		return "AuthenticationService []";
+	}
+
 	// TODO: Task 3
 	// DO NOT CHANGE THE METHOD'S SIGNATURE
 	// Write an implementation to disable a user account for 30 mins

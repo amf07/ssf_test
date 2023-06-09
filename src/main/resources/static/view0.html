@@ -15,26 +15,35 @@
 		<table>
 			<tr>
 				<td> 
+					<form action="application/x-www-form-urlencoded" method="post">
 					<label for="username">Username:</label> 
 				</td>
 				<td>
-					<input type="text" id="username" size="30" 
-							placeholder="Please type in your username" >
+					<h1> Your Information needed </h1>
+					
+					<p>
+					Username:
+						<p data-th-text="*{name}"></p>
+					</p>
+							
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<label for="password">Password:</label>
-				</td>
-				<td>
-					<input type="password" id="password" size="30" 
-							placeholder="Please type in your password">
-				</td>
+					<p>
+						password:
+						<p data-th-text="*{password}"></p>
+					</p>
+						
+				
+							</td>
+							
 			</tr>
 			<tr>
 				<td></td>
 				<td>
 					<button>Login</button>
+					<p th:if="${errorMessage != null}"  style="color: red;">[[${errorMessage}]]</p> 
 				</td>
 			</tr>
 		</table>
